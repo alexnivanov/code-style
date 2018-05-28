@@ -59,3 +59,19 @@ class MyWSActor(out: ActorRef) extends Actor {
 
 }
 ```
+
+### Case statements should be separated by blank line:
+```scala
+def active(actors: Map[Int, List[MyWSActor]]): Receive = {
+    case AddMyActor(actor) =>
+      actors.get(actor.id) match {
+        case None =>
+          context become active(actors + (actor.id -> List(actor)))
+        case Some(list) =>
+          context become active(actors + (actor.id -> (list :+ actor)))
+      }
+
+    case RemoveMyActor(actor) =>
+      context become active(actors - actor.id)
+  }
+```
