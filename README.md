@@ -8,14 +8,14 @@ This is basically an extension (it never breaks existing rules) to the default I
 ### Classes body should have blank lines in the beginning and in the end
 ```scala
 class MyActor(out: ActorRef) extends Actor {
-// IT'S NICE TO HAVE A BLNK LINE HERE
+
   private val log = Logger(this.getClass)
 
   def receive: PartialFunction[Any, Unit] = {
     case msg: String =>
       out ! ("I received your message: " + msg)
   }
-// IT'S NICE TO HAVE A BLNK LINE HERE
+
 }
 ```
 
