@@ -40,7 +40,7 @@ object MyWSActor {
 }
 ```
 
-### Linked classes (class/companion objects) can be separated by 1 line:
+### Linked classes (eg. class/companion object) can be separated by 1 line:
 ```scala
 object MyWSActor {
 
