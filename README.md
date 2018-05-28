@@ -19,7 +19,7 @@ class MyActor(out: ActorRef) extends Actor {
 }
 ```
 
-### Different classes in same file should be separated by 2 lines
+### Different classes in the same file should be separated by 2 lines
 ```scala
 class MyWebSocket @Inject()(implicit system: ActorSystem, mat: Materializer) {
 
