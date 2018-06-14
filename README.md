@@ -37,7 +37,6 @@ class MyActor(out: ActorRef) extends Actor {
 class MyWebSocket @Inject()(implicit system: ActorSystem, mat: Materializer) {
 
   def socket(barId: Int) = WebSocket.accept[String, String] { request =>
-
     ActorFlow.actorRef { out =>
       MyWSActor.props(out)
     }
@@ -80,6 +79,7 @@ def active(actors: Map[Int, List[MyWSActor]]): Receive = {
       actors.get(actor.id) match {
         case None =>
           context become active(actors + (actor.id -> List(actor)))
+
         case Some(list) =>
           context become active(actors + (actor.id -> (list :+ actor)))
       }
