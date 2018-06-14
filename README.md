@@ -3,6 +3,19 @@ This is a common code style for high-level OO languages (Java/Scala/Kotlin/Swift
 
 This is basically an extension (it never breaks existing rules) to the default IntelliJ/Eclipse formatting.
 
+## Rule of thumb
+
+The general rule to be followed and the ultimate reason behind all the subsequent rules:
+
+**_EVERY_ (including whitespace) symbol in the code base should make sense and serve one or several purposes:**
+1. _Required_ logic
+1. Code maintainability
+1. Code readability
+
+Therefore we should strive to remove unused code including comments and whitespaces as much as possible.
+
+**The secondary rule of thumb is that we should strive to have the minimum number of symbols in our codebase unless it damages maintainability and readability.**
+
 ## Lines spacing
 
 ### Classes body should have blank lines in the beginning and in the end:
