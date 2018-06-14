@@ -88,3 +88,16 @@ def active(actors: Map[Int, List[MyWSActor]]): Receive = {
       context become active(actors - actor.id)
   }
 ```
+
+### Multiple parameters should be on new line each:
+```kotlin
+installButton.setOnClickListener {
+    RequestHandler.downloadModel(
+            this,
+            "model/pb/$modelName",
+            modelFile,
+            progressBar,
+            Runnable { finish() }
+   )
+}
+```
