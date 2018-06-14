@@ -1,7 +1,7 @@
 # code-style
-This is a common code style for high-level OO languages (Java/Scala/Kotlin/Swift/...) which is a result of many years of development. You can adopt it for your projects to make the code more clean, readable and sustainable.
+This is a common code style for high-level OO languages (Java/Scala/Kotlin/Swift/...) which is a result of many years of polishment. You can adopt it for your projects to make the code more clean, readable and sustainable.
 
-This is basically an extension (it never breaks existing rules) to the default IntelliJ/Eclipse formatting.
+This is basically an extension (never breaking existing rules) to the default IDEs formatting.
 
 ## Rule of thumb
 
